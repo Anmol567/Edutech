@@ -1,0 +1,117 @@
+<% include partials/header%>
+
+
+<div class="container">
+<div class="jumbotron">
+<h1 class="display-2">SALES</h1>
+
+<div class="row">
+<div class="col-3 col-sm-3">
+<a href="/add" class="btn btn-primary btn-lg active" role="button" >Add to database</a>
+</div>
+</td>
+
+
+<div class="col-3 col-sm-3">
+<a href="/bill" class="btn btn-danger btn-lg active" role="button" >Create Bill</a>
+</div>
+
+
+
+<div class="col-3 col-sm-3">
+<a href="/delete" class="btn btn-success btn-lg active" role="button" >Delete</a>
+</div>
+</td>
+
+<div class="col-3 col-sm-3">
+<a href="/cancel" class="btn btn-warning btn-lg active" role="button" >Cancel</a>
+</div>
+</div>
+<table class="table table-striped">
+<thread>
+    <tr>
+    <tr>
+<th scope="col">
+<div class="col-2 col-sm-2">
+<h4>SERIAL NO</h4>
+</div>
+</th>
+
+<th scope="col">
+<div class="col-2 col-sm-2">
+<h4>ITEM CODE</h4>
+</div>
+</th>
+
+<th scope="col">
+<div class="col-2 col-sm-2">
+<h4>ITEM NAME</h4>
+</div>
+</th>
+
+<th scope="col">
+<div class="col-2 col-sm-2">
+<h4>UNIT PRICE</h4>
+</div>
+</th>
+
+<th scope="col">
+<div class="col-2 col-sm-2">
+<h4>QUANTITY</h4>
+</div>
+</th>
+
+<th scope="col">
+<div class="col-2 col-sm-2">
+<h4>PRICE</h4>
+</div>
+</th>
+
+</tr>
+</thread>
+<tbody>
+
+<%for(var a=0;a<sales.length;a++){%>
+<tr>
+<td>
+<div class="col-2 col-sm-2">
+<h4><%=sales[a].SerialNo%> <a href="/<%=sales[a].
+_id%>/sell" class="btn btn-info btn-sm active" role="button" >SELL</a></h4>
+</div>
+</td>
+
+<td>
+<div class="col-2 col-sm-2">
+<h4><%=sales[a].ItemCode%></h4>
+</div>
+</td>
+
+<td>
+<div class="col-2 col-sm-2">
+<h4><%=sales[a].ItemName%></h4>
+</div>
+</td>
+
+<td>
+<div class="col-2 col-sm-2">
+<h4><%=sales[a].UnitPrice%></h4>
+</div>
+</td>
+
+<td>
+<div class="col-2 col-sm-2">
+<h4><%=sales[a].Quantity%></h4>
+</div>
+</td>
+
+<td>
+<div class="col-2 col-sm-2">
+<h4><%=sales[a].Price%></h4>
+</div>
+</td>
+</tr>
+
+<%}%>
+</tbody>
+
+<% include partials/footer%>

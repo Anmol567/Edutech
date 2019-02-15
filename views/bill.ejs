@@ -1,0 +1,119 @@
+<% include partials/header%>
+<div class="container">
+<div class="jumbotron">
+<h1 class="display-1">BILL</h1>
+</div>
+<table class="table table-striped">
+<thead>
+ <tr>
+ <div class="col-2 col-sm-2">
+      <th scope="col">
+<h4>SERIAL NO</h4>
+</th>
+</div>
+
+<div class="col-2 col-sm-2">
+      <th scope="col">
+<h4>ITEM CODE</h4>
+</th>
+</div>
+
+<div class="col-2 col-sm-2">
+      <th scope="col">
+<h4>ITEM NAME</h4>
+</th>
+</div>
+
+<div class="col-2 col-sm-2">
+  <th scope="col">
+<h4>UNIT PRICE</h4>
+</th>
+</div>
+
+<div class="col-2 col-sm-2">
+    <th scope="col">
+<h4>QUANTITY</h4>
+</th>
+</div>
+<div class="col-2 col-sm-2">
+      <th scope="col">
+<h4>PRICE</h4>
+</th>
+</div>
+  </tr>
+ </thead>
+
+
+<% var s=0 %>
+
+
+
+<%for(var a=0;a<sale.length;a++){%>
+  <tbody>
+    <tr>
+ 
+ <td>
+<div class="col-2 col-sm-2">
+<h4><%=sale[a].SerialNo%></h4>
+</div>
+</td>
+
+ <td>
+<div class="col-2 col-sm-2">
+<h4><%=sale[a].ItemCode%></h4>
+</div>
+</td>
+
+
+
+ <td>
+<div class="col-2 col-sm-2">
+<h4><%=sale[a].ItemName%></h4>
+</div>
+</td>
+
+
+
+ <td>
+<div class="col-2 col-sm-2">
+<h4><%=sale[a].UnitPrice%></h4>
+</div>
+</td>
+
+
+
+ <td>
+<div class="col-2 col-sm-2">
+<h4><%=sale[a].Sold%></h4>
+</div>
+</td>
+
+
+
+ <td>
+<div class="col-2 col-sm-2">
+<h4><%=sale[a].UnitPrice*sale[a].Sold%></h4>
+</td>
+</div>
+
+<% s=s+sale[a].UnitPrice*sale[a].Sold %>
+</tr>
+
+<%}%>
+
+
+
+
+
+
+  </tbody>
+
+</table>
+<h4 class="display-4">
+ <p class="text-right">TOTAL AMOUNT <%=s%></p>
+</h4>
+</div>	
+
+
+
+<% include partials/footer%>

@@ -1,0 +1,39 @@
+<% include partials/header%>
+
+<div class="container">
+<div class="jumbotron">
+<h1>ADD NEW ITEM</h1>
+<form action="/add" method=POST role="form">
+
+<div class="form-group ">
+<input type="text" name="sale[SerialNo]" placeholder="SERIAL NO"  class="form-control" required>
+</div>
+
+<div class="form-group ">
+<input type="text" name="sale[ItemCode]" placeholder="ITEM CODE"  class="form-control" required>
+</div>
+
+<div class="form-group ">
+<input type="text" name="sale[ItemName]" placeholder="ITEM NAME"   class="form-control" required>
+</div>
+
+<div class="form-group ">
+<input type="text" name="sale[UnitPrice]" placeholder="UNIT PRICE"  class="form-control" required>
+</div>
+
+<div class="form-group ">
+<input type="text" name="sale[Quantity]" placeholder="QUANTITY"  class="form-control" required>
+</div>
+
+
+<div class="form-group ">
+<input type="text" name="sale[Price]" class="form-control" placeholder="PRICE">
+</div>
+
+<button type="submit" class="btn btn-primary">SUBMIT</button>
+</form>
+</div>
+
+</div>
+
+<% include partials/footer%>
